@@ -1,0 +1,69 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  // Relations
+  books     UserBook[]
+  interests Interest[] @relation("UserInterests")
+  chatrooms Chatroom[] @relation("UserChatrooms")
+}
+
+model Book {
+  id          String   @id @default(uuid())
+  title       String
+  author      String
+  coverUrl    String?
+  description String?
+  category    String
+  createdAt   DateTime @default(now())
+  
+  // Relations
+  readers     UserBook[]
+}
+
+model UserBook {
+  id         String   @id @default(uuid())
+  userId     String
+  bookId     String
+  progress   Int      @default(0) // percentage
+  status     String   @default("reading") // reading, completed, to-read
+  
+  user       User     @relation(fields: [userId], references: [id])
+  book       Book     @relation(fields: [bookId], references: [id])
+
+  @@unique([userId, bookId])
+}
+
+model Interest {
+  id          String   @id @default(uuid())
+  name        String   @unique // Career, Growth, Business, etc.
+  
+  // Relations
+  users       User[]     @relation("UserInterests")
+  chatrooms   Chatroom[]
+}
+
+model Chatroom {
+  id          String   @id @default(uuid())
+  name        String   // e.g. "Science", "Literature"
+  description String?
+  imageUrl    String?
+  interestId  String
+  createdAt   DateTime @default(now())
+  
+  // Relations
+  interest    Interest @relation(fields: [interestId], references: [id])
+  members     User[]   @relation("UserChatrooms")
+}
