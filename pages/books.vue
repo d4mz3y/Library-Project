@@ -40,17 +40,17 @@
 
       <!-- Books Grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10">
-        <div v-for="i in 10" :key="i" class="group cursor-pointer">
+        <div v-for="book in libraryBooks" :key="book.title" class="group cursor-pointer">
           <div class="aspect-[2/3] bg-gray-200 rounded-2xl mb-4 overflow-hidden shadow-sm group-hover:shadow-xl transition-all relative">
-            <img :src="`https://images.unsplash.com/photo-${1512820790803 + i * 10}-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`" 
-                 alt="Book cover" 
+            <img :src="book.image" 
+                 :alt="book.title" 
                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
           </div>
-          <h3 class="font-bold text-gray-900 text-lg leading-tight line-clamp-1 mb-1">Creative Process {{ i }}</h3>
-          <p class="text-gray-500 text-sm">Author Name</p>
+          <h3 class="font-bold text-gray-900 text-lg leading-tight line-clamp-1 mb-1">{{ book.title }}</h3>
+          <p class="text-gray-500 text-sm">{{ book.author }}</p>
           <div class="mt-2 text-xs font-bold text-primary bg-primary/10 inline-block px-2 py-1 rounded-md">
-            {{ tabs[i % tabs.length] || 'Business' }}
+            {{ book.category }}
           </div>
         </div>
       </div>
@@ -68,6 +68,20 @@ useHead({
 
 const tabs = ['ALL', 'Business', 'Romance', 'Autobiography', 'Science', 'Fiction']
 const activeTab = ref('ALL')
+
+const libraryBooks = [
+  { title: "The Intelligent Investor", author: "Benjamin Graham", image: "https://books.google.com/books/content?id=-NdcCSt8t_YC&printsec=frontcover&img=1&zoom=0&source=gbs_api", category: "Business" },
+  { title: "This Is the Story of a Happy Marriage", author: "Ann Patchett", image: "https://books.google.com/books/content?id=efE_AQAAQBAJ&printsec=frontcover&img=1&zoom=0&edge=curl&source=gbs_api", category: "Romance" },
+  { title: "Just Tyrus", author: "Tyrus", image: "https://books.google.com/books/content?id=kRtdEAAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api", category: "Autobiography" },
+  { title: "Under the Banner of Heaven", author: "Jon Krakauer", image: "https://books.google.com/books/content?id=c_8DHAAACAAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api", category: "History" },
+  { title: "Stop Chasing Happy", author: "Phil Waldrep", image: "https://books.google.com/books/content?id=LYE-EAAAQBAJ&printsec=frontcover&img=1&zoom=0&edge=curl&source=gbs_api", category: "Self-Help" },
+  { title: "The Women of the Bible Speak", author: "Shannon Bream", image: "https://books.google.com/books/content?id=PPuTEAAAQBAJ&printsec=frontcover&img=1&zoom=0&edge=curl&source=gbs_api", category: "Religion" },
+  { title: "The 5 Love Languages", author: "Gary D. Chapman", image: "https://books.google.com/books/content?id=cVYB4RHJDgcC&printsec=frontcover&img=1&zoom=0&edge=curl&source=gbs_api", category: "Romance" },
+  { title: "The Mothers and Daughters", author: "Shannon Bream", image: "https://books.google.com/books/content?id=fpk6zwEACAAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api", category: "Religion" },
+  { title: "Find Your People", author: "Jennie Allen", image: "https://books.google.com/books/content?id=7dv2zgEACAAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api", category: "Growth" },
+  { title: "Universal Principles of Design", author: "William Lidwell", image: "https://books.google.com/books/content?id=l0QPECGQySYC&printsec=frontcover&img=1&zoom=0&source=gbs_api", category: "Art/Design" },
+  { title: "The Making of a Manager", author: "Julie Zhuo", image: "https://books.google.com/books/content?id=malkEQAAQBAJ&printsec=frontcover&img=1&zoom=0&edge=curl&source=gbs_api", category: "Business" }
+]
 </script>
 
 <style scoped>

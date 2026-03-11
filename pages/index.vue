@@ -62,40 +62,44 @@
       
       <!-- Books Scroll Area -->
       <div class="flex space-x-6 overflow-x-auto pb-8 snap-x hide-scrollbar">
-        <!-- Book Card Placeholder 1 -->
-        <div class="min-w-[240px] snap-start group cursor-pointer">
-          <div class="h-[320px] bg-gray-100 rounded-2xl mb-4 overflow-hidden shadow-md group-hover:shadow-xl transition-all">
-            <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="The Intelligent Investor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <!-- Book Card 1 -->
+        <div class="min-w-[240px] snap-start group cursor-pointer w-[240px]">
+          <div class="h-[360px] bg-gray-100 rounded-2xl mb-4 overflow-hidden shadow-md group-hover:shadow-xl transition-all">
+            <img src="https://books.google.com/books/content?id=-NdcCSt8t_YC&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="The Intelligent Investor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
-          <h4 class="font-bold text-gray-900 text-lg line-clamp-1">The Intelligent Investor</h4>
-          <p class="text-primary font-medium text-sm mt-1 bg-secondary inline-block px-3 py-1 rounded-full">Business</p>
+          <h4 class="font-bold text-gray-900 text-lg leading-tight line-clamp-1 mb-1">The Intelligent Investor</h4>
+          <p class="text-gray-500 text-sm mb-1">Benjamin Graham</p>
+          <p class="text-primary font-bold text-xs mt-1 bg-secondary inline-block px-3 py-1 rounded-full uppercase tracking-wider">Business</p>
         </div>
 
-        <!-- Book Card Placeholder 2 -->
-        <div class="min-w-[240px] snap-start group cursor-pointer">
-          <div class="h-[320px] bg-gray-100 rounded-2xl mb-4 overflow-hidden shadow-md group-hover:shadow-xl transition-all">
-            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="This is the Story of a Happy Marriage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <!-- Book Card 2 -->
+        <div class="min-w-[240px] snap-start group cursor-pointer w-[240px]">
+          <div class="h-[360px] bg-gray-100 rounded-2xl mb-4 overflow-hidden shadow-md group-hover:shadow-xl transition-all">
+            <img src="https://books.google.com/books/content?id=efE_AQAAQBAJ&printsec=frontcover&img=1&zoom=0&edge=curl&source=gbs_api" alt="This is the Story of a Happy Marriage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
-          <h4 class="font-bold text-gray-900 text-lg line-clamp-1">Happy Marriage Story</h4>
-          <p class="text-primary font-medium text-sm mt-1 bg-secondary inline-block px-3 py-1 rounded-full">Romance</p>
+          <h4 class="font-bold text-gray-900 text-lg leading-tight line-clamp-1 mb-1">A Happy Marriage</h4>
+          <p class="text-gray-500 text-sm mb-1">Ann Patchett</p>
+          <p class="text-primary font-bold text-xs mt-1 bg-secondary inline-block px-3 py-1 rounded-full uppercase tracking-wider">Romance</p>
         </div>
 
-        <!-- Book Card Placeholder 3 -->
-        <div class="min-w-[240px] snap-start group cursor-pointer">
-          <div class="h-[320px] bg-gray-100 rounded-2xl mb-4 overflow-hidden shadow-md group-hover:shadow-xl transition-all">
-            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Atomic Habits" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <!-- Book Card 3 -->
+        <div class="min-w-[240px] snap-start group cursor-pointer w-[240px]">
+          <div class="h-[360px] bg-gray-100 rounded-2xl mb-4 overflow-hidden shadow-md group-hover:shadow-xl transition-all">
+             <img src="https://books.google.com/books/content?id=kRtdEAAAQBAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api" alt="Just Tyrus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
-          <h4 class="font-bold text-gray-900 text-lg line-clamp-1">Atomic Habits</h4>
-          <p class="text-primary font-medium text-sm mt-1 bg-secondary inline-block px-3 py-1 rounded-full">Growth</p>
+          <h4 class="font-bold text-gray-900 text-lg leading-tight line-clamp-1 mb-1">Just Tyrus</h4>
+          <p class="text-gray-500 text-sm mb-1">Tyrus</p>
+          <p class="text-primary font-bold text-xs mt-1 bg-secondary inline-block px-3 py-1 rounded-full uppercase tracking-wider">Autobiography</p>
         </div>
 
-        <!-- Book Card Placeholder 4 -->
-        <div class="min-w-[240px] snap-start group cursor-pointer">
-          <div class="h-[320px] bg-gray-100 rounded-2xl mb-4 overflow-hidden shadow-md group-hover:shadow-xl transition-all">
-            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sapiens" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <!-- Book Card 4 -->
+        <div class="min-w-[240px] snap-start group cursor-pointer w-[240px]">
+          <div class="h-[360px] bg-gray-100 rounded-2xl mb-4 overflow-hidden shadow-md group-hover:shadow-xl transition-all">
+            <img src="https://books.google.com/books/content?id=malkEQAAQBAJ&printsec=frontcover&img=1&zoom=0&edge=curl&source=gbs_api" alt="The Making of a Manager" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
-          <h4 class="font-bold text-gray-900 text-lg line-clamp-1">Sapiens</h4>
-          <p class="text-primary font-medium text-sm mt-1 bg-secondary inline-block px-3 py-1 rounded-full">History</p>
+          <h4 class="font-bold text-gray-900 text-lg leading-tight line-clamp-1 mb-1">The Making of a Manager</h4>
+          <p class="text-gray-500 text-sm mb-1">Julie Zhuo</p>
+          <p class="text-primary font-bold text-xs mt-1 bg-secondary inline-block px-3 py-1 rounded-full uppercase tracking-wider">Business</p>
         </div>
       </div>
     </section>
