@@ -9,9 +9,9 @@
         <p class="text-lg text-gray-600 leading-relaxed">
           Share your opinions and thoughts on your favorite books. Engage in meaningful discussions with a community that shares your passion for literature.
         </p>
-        <button class="bg-primary hover:bg-primary-dark transition-colors text-white font-medium px-8 py-3 rounded-full shadow-lg shadow-primary/30">
+        <NuxtLink to="/signup" class="inline-block bg-primary hover:bg-primary-dark transition-colors text-white font-medium px-8 py-3 rounded-full shadow-lg shadow-primary/30">
           Get Started
-        </button>
+        </NuxtLink>
       </div>
       <div class="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl">
         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Group of friends reading" class="w-full h-full object-cover" />
@@ -31,9 +31,9 @@
           <p class="text-lg text-gray-600 leading-relaxed">
             Find reading friends perfectly matched to your interests. Build a network of intellectuals and expand your horizons through shared knowledge.
           </p>
-          <button class="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors font-medium px-8 py-3 rounded-full">
+          <NuxtLink to="/chatrooms" class="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors font-medium px-8 py-3 rounded-full">
             Explore Chatrooms
-          </button>
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -47,9 +47,9 @@
           </h2>
           <p class="text-lg text-gray-700">Connect with thousands of active readers across the globe.</p>
         </div>
-        <button class="bg-primary hover:bg-primary-dark transition-colors text-white font-medium px-10 py-4 rounded-full text-lg shadow-lg shadow-primary/40 flex-shrink-0">
+        <NuxtLink to="/signup" class="bg-primary hover:bg-primary-dark transition-colors text-white font-medium px-10 py-4 rounded-full text-lg shadow-lg shadow-primary/40 flex-shrink-0 inline-block">
           Get Started
-        </button>
+        </NuxtLink>
       </div>
     </section>
 

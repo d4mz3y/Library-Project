@@ -1,13 +1,15 @@
 <template>
-  <div class="min-h-screen flex flex-col pt-20">
+  <div class="min-h-screen flex flex-col">
     <AppNavbar />
-    <main class="flex-grow">
+    <main class="min-h-screen pt-20">
       <slot />
     </main>
-    <AppFooter />
+    <AppFooter v-if="route.path !== '/chatrooms'" />
   </div>
 </template>
 
 <script setup lang="ts">
-// Default layout
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 </script>
